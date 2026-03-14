@@ -1,58 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
     <title>CpEdit Documentation</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        const translations = {
-            en: {
-                title: "CpEdit Documentation",
-                welcome: "Welcome to CpEdit Documentation. This documentation explains how to use and develop with CpEdit.",
-                indexLinks: [
-                    {text: "Introduction", href: "01_Introduction.html"},
-                    {text: "Installation", href: "02_Installation.html"},
-                    {text: "User Guide", href: "03_UserGuide.html"},
-                    {text: "Developer Guide", href: "04_DeveloperGuide.html"},
-                    {text: "Notes", href: "05_Notes.html"}
-                ]
-            },
-            ja: {
-                title: "CpEdit ドキュメント",
-                welcome: "このドキュメントでは、CpEditの使い方や開発情報をまとめています。",
-                indexLinks: [
-                    {text: "はじめに", href: "01_Introduction.html"},
-                    {text: "インストール", href: "02_Installation.html"},
-                    {text: "ユーザーガイド", href: "03_UserGuide.html"},
-                    {text: "開発者ガイド", href: "04_DeveloperGuide.html"},
-                    {text: "注意事項", href: "05_Notes.html"}
-                ]
-            }
-        };
-
-        function setLanguage(lang) {
-            const t = translations[lang];
-            document.documentElement.lang = lang;
-            document.title = t.title;
-            document.getElementById("welcome-text").innerText = t.welcome;
-
-            const nav = document.getElementById("index-links");
-            nav.innerHTML = "";
-            t.indexLinks.forEach(link => {
-                const a = document.createElement("a");
-                a.href = link.href;
-                a.innerText = link.text;
-                a.className = "page-link";
-                nav.appendChild(a);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            // navigator.language でブラウザ言語を検出
-            const lang = navigator.language.startsWith("en") ? "en" : "ja";
-            setLanguage(lang);
-        });
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
